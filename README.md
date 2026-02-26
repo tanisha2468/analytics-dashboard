@@ -12,34 +12,22 @@ Tech Stack Used
 
 Frontend:
 
-React.js
-
-React Router DOM
-
-Axios
-
-Chart.js
-
-react-chartjs-2
-
+- React.js
+- React Router DOM
+- Axios
+- Chart.js
+- react-chartjs-2
 
 Backend:
 
-Node.js
-
-Express.js
-
-MongoDB Atlas
-
-Mongoose
-
-jsonwebtoken (JWT)
-
-bcryptjs
-
-dotenv
-
-cors
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- jsonwebtoken (JWT)
+- bcryptjs
+- dotenv
+- cors
 
 ---
 
@@ -52,7 +40,6 @@ Registers a new user.
 
 POST /api/auth/login
 Authenticates user and returns a JWT token.
-
 
 ---
 
@@ -71,13 +58,9 @@ Database Schema
 User Collection
 
 Fields:
-
 name (String)
-
 email (String, unique)
-
 password (String, hashed using bcrypt)
-
 createdAt (Date)
 
 ---
@@ -85,57 +68,11 @@ createdAt (Date)
 Sales Collection
 
 Fields:
-
 category (String)
-
 revenue (Number)
-
 quantity (Number)
-
 date (Date)
-
 createdAt (Date)
-
----
-
-Steps to Run the Project
-
-1. Clone Repository
-
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd analytics-dashboard
-
----
-
-2. Backend Setup
-
-cd backend
-npm install
-
-Create a .env file inside backend folder with:
-
-PORT=5001
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-
-Start backend:
-
-npm start
-
-Backend runs on: http://localhost:5001
-
----
-
-3. Frontend Setup
-
-cd frontend
-npm install
-npm start
-
-Frontend runs on: http://localhost:3000
-
-Ensure Axios baseURL points to: http://localhost:5001
-
 
 ---
 
