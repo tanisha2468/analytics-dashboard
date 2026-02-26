@@ -15,5 +15,5 @@ app.use(express.json());
 registerRoutes(app);
 
 app.listen(5001, () => {
-  console.log("server running on port 5000");
+  ("server running on port 5000");
 });

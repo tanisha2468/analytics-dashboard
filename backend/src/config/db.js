@@ -10,7 +10,7 @@ const connectDB = async () => {
       dbName: "analyticsapp",
     });
 
-    console.log("connected to db");
+    //console.log("connected to db");
   } catch (error) {
     console.error("failed to connect to db", error);
     process.exit(1);

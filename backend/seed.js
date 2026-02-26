@@ -18,6 +18,6 @@ for (let i = 1; i <= 50; i++) {
 }
 
 Sale.insertMany(data).then(() => {
-  console.log("Data seeded successfully");
+  //console.log("Data seeded successfully");
   mongoose.connection.close();
 });
