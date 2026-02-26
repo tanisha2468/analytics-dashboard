@@ -1,21 +1,16 @@
-📊 Analytics Dashboard – Full Stack Application
-📌 Project Overview
+Analytics Dashboard – Full Stack Application
 
-This is a full-stack Analytics Dashboard built using the MERN stack (MongoDB, Express, React, Node.js).
+Project Overview:
 
-The application provides:
+This is a full-stack Analytics Dashboard built using Node.js, Express, MongoDB, and React.
 
-• JWT-based authentication (Register/Login)
-• Secure REST APIs
-• MongoDB database integration
-• Dynamic dashboard with multiple data visualizations
-• Category-based filtering
-• Clean separation of frontend and backend
+The application implements JWT-based authentication and provides a dynamic dashboard that visualizes sales data using multiple chart types. It demonstrates REST API development, database integration, authentication, protected routes, and frontend data visualization.
 
-The dashboard visualizes sales data including revenue trends, category-wise revenue, and product quantity distribution.
+---
 
-🛠 Tech Stack Used
-Frontend
+Tech Stack Used
+
+Frontend:
 
 React.js
 
@@ -25,108 +20,99 @@ Axios
 
 Chart.js
 
-React ChartJS 2
+react-chartjs-2
 
-Backend
+
+Backend:
 
 Node.js
 
 Express.js
 
-MongoDB (Atlas)
+MongoDB Atlas
 
 Mongoose
 
-JWT (jsonwebtoken)
+jsonwebtoken (JWT)
 
 bcryptjs
 
 dotenv
 
-CORS
+cors
 
-🔌 API Endpoints
-🔐 Authentication Routes
+---
+
+API Endpoints
+
+Authentication
 
 POST /api/auth/register
 Registers a new user.
 
-Body:
-{
-"name": "Tanisha",
-"email": "test@gmail.com
-",
-"password": "123456"
-}
-
 POST /api/auth/login
-Logs in user and returns JWT token.
+Authenticates user and returns a JWT token.
 
-Body:
-{
-"email": "test@gmail.com
-",
-"password": "123456"
-}
 
-Response:
-{
-"token": "JWT_TOKEN"
-}
+---
 
-📊 Sales Routes
+Sales
 
 GET /api/sales
-Fetch all sales data (Protected Route)
+Fetch all sales data (Protected route).
 
 POST /api/sales
-Add new sales record
+Add a new sales record.
 
-Body:
-{
-"category": "Groceries",
-"revenue": 5000,
-"quantity": 20,
-"date": "2026-02-26"
-}
+---
 
-🗂 Database Schema
-👤 User Schema
+Database Schema
 
-Collection: users
+User Collection
 
-{
-name: String,
-email: String (unique),
-password: String (hashed),
-createdAt: Date
-}
+Fields:
 
-📦 Sales Schema
+name (String)
 
-Collection: sales
+email (String, unique)
 
-{
-category: String,
-revenue: Number,
-quantity: Number,
-date: Date,
-createdAt: Date
-}
+password (String, hashed using bcrypt)
 
-▶️ Steps to Run the Project
-1️⃣ Clone Repository
+createdAt (Date)
+
+---
+
+Sales Collection
+
+Fields:
+
+category (String)
+
+revenue (Number)
+
+quantity (Number)
+
+date (Date)
+
+createdAt (Date)
+
+---
+
+Steps to Run the Project
+
+1. Clone Repository
 
 git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-
 cd analytics-dashboard
 
-🚀 Backend Setup
+---
+
+2. Backend Setup
 
 cd backend
 npm install
 
-Create a .env file inside backend folder:
+Create a .env file inside backend folder with:
 
 PORT=5001
 MONGO_URI=your_mongodb_connection_string
@@ -136,30 +122,46 @@ Start backend:
 
 npm start
 
-Server will run on:
-http://localhost:5001
+Backend runs on: http://localhost:5001
 
-💻 Frontend Setup
+---
+
+3. Frontend Setup
 
 cd frontend
 npm install
 npm start
 
-Frontend runs on:
-http://localhost:3000
+Frontend runs on: http://localhost:3000
 
-Make sure axios baseURL points to backend:
+Ensure Axios baseURL points to: http://localhost:5001
 
-http://localhost:5001
 
-📊 Dashboard Features
+---
 
-The dashboard displays:
+Dashboard Features
 
-• Revenue by Category (Bar Chart)
-• Revenue Over Time (Line Chart)
-• Revenue Trend (Area Chart)
-• Revenue Distribution (Pie Chart)
-• Quantity by Category (Doughnut Chart)
+Revenue by Category (Bar Chart)
 
-Includes category filtering dropdown.
+Revenue Over Time (Line Chart)
+
+Revenue Trend (Area Chart)
+
+Revenue Distribution (Pie Chart)
+
+Quantity by Category (Doughnut Chart)
+
+Category Filtering
+
+Protected Dashboard Route
+
+Loading and Error Handling
+
+---
+
+Project Structure
+
+analytics-dashboard
+backend
+frontend
+README.md
